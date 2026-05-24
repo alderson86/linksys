@@ -3,21 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Linksys Sistemas</title>
+<title>LINKSYS SISTEMAS</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
+    font-family:'Poppins',sans-serif;
 }
 
 html{
@@ -28,8 +25,6 @@ body{
     background:#0f172a;
     color:white;
 }
-
-/* HEADER */
 
 header{
     position:fixed;
@@ -48,10 +43,9 @@ header{
 }
 
 .logo{
-    font-size:30px;
+    font-size:28px;
     font-weight:700;
     color:#38bdf8;
-    letter-spacing:2px;
 }
 
 .nav-links{
@@ -63,8 +57,7 @@ header{
 .nav-links a{
     color:white;
     text-decoration:none;
-    transition:0.3s;
-    font-weight:500;
+    transition:.3s;
 }
 
 .nav-links a:hover{
@@ -77,15 +70,12 @@ header{
     cursor:pointer;
 }
 
-/* HERO */
-
 .hero{
     height:100vh;
     background:
-    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
     url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop')
     center/cover;
-
     display:flex;
     justify-content:center;
     align-items:center;
@@ -95,7 +85,6 @@ header{
 
 .hero-content{
     max-width:850px;
-    animation:fadeIn 1.2s ease;
 }
 
 .hero h1{
@@ -116,15 +105,7 @@ header{
     padding:15px 35px;
     border-radius:12px;
     font-weight:700;
-    transition:0.3s;
-    display:inline-block;
 }
-
-.btn:hover{
-    transform:scale(1.08);
-}
-
-/* SECTIONS */
 
 section{
     padding:100px 8%;
@@ -137,79 +118,33 @@ section h2{
     color:#38bdf8;
 }
 
-/* SOBRE */
-
-.sobre-container{
+.sobre-container,
+.servicos-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
 }
 
-.card{
+.card,.servico-card,.politica-box,.tab-content{
     background:#1e293b;
     padding:35px;
     border-radius:18px;
-    transition:0.4s;
-    box-shadow:0 0 20px rgba(0,0,0,0.2);
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-.card h3{
-    margin-bottom:15px;
-    color:#38bdf8;
-}
-
-/* SERVICOS */
-
-.servicos-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-    gap:25px;
 }
 
 .servico-card{
-    background:#1e293b;
-    padding:35px;
-    border-radius:18px;
-    transition:0.4s;
     text-align:center;
 }
 
-.servico-card:hover{
-    transform:translateY(-10px);
-    background:#243447;
-}
-
-.servico-card h3{
+.servico-card h3,.card h3{
     color:#38bdf8;
     margin-bottom:15px;
 }
-
-/* POLITICA */
-
-.politica-box{
-    background:#1e293b;
-    padding:40px;
-    border-radius:20px;
-    max-width:900px;
-    margin:auto;
-}
-
-.politica-box ul{
-    margin-top:20px;
-    line-height:2;
-}
-
-/* TABS */
 
 .tabs{
     display:flex;
     justify-content:center;
-    flex-wrap:wrap;
     gap:15px;
+    flex-wrap:wrap;
     margin-bottom:30px;
 }
 
@@ -220,11 +155,8 @@ section h2{
     background:#334155;
     color:white;
     cursor:pointer;
-    transition:0.3s;
-    font-weight:600;
 }
 
-.tab-btn:hover,
 .tab-btn.active{
     background:#38bdf8;
     color:black;
@@ -232,19 +164,13 @@ section h2{
 
 .tab-content{
     display:none;
-    background:#1e293b;
-    padding:35px;
-    border-radius:20px;
     max-width:850px;
     margin:auto;
-    animation:fade 0.5s ease;
 }
 
 .tab-content.active{
     display:block;
 }
-
-/* FORM */
 
 form{
     max-width:700px;
@@ -257,37 +183,32 @@ form{
     border-radius:20px;
 }
 
-input,
-textarea{
+input,textarea{
     padding:16px;
     border:none;
     border-radius:10px;
     background:#0f172a;
     color:white;
-    font-size:16px;
 }
 
 textarea{
     min-height:150px;
-    resize:vertical;
 }
 
-form button{
+button{
     background:#38bdf8;
     border:none;
     padding:16px;
     border-radius:12px;
-    font-size:16px;
     font-weight:700;
     cursor:pointer;
-    transition:0.3s;
 }
 
-form button:hover{
-    transform:scale(1.03);
+#status-envio{
+    text-align:center;
+    margin-top:10px;
+    font-weight:600;
 }
-
-/* FOOTER */
 
 footer{
     background:#020617;
@@ -295,34 +216,7 @@ footer{
     padding:30px;
 }
 
-/* ANIMATIONS */
-
-@keyframes fade{
-    from{
-        opacity:0;
-        transform:translateY(10px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* RESPONSIVO */
-
 @media(max-width:768px){
-
     .nav-links{
         position:absolute;
         top:80px;
@@ -331,7 +225,7 @@ footer{
         background:#1e293b;
         flex-direction:column;
         padding:30px;
-        transition:0.4s;
+        transition:.4s;
     }
 
     .nav-links.active{
@@ -345,316 +239,176 @@ footer{
     .hero h1{
         font-size:38px;
     }
-
-    .hero p{
-        font-size:17px;
-    }
-
-    section h2{
-        font-size:32px;
-    }
 }
-
 </style>
 </head>
-
 <body>
 
 <header>
-    <nav class="navbar">
+<nav class="navbar">
+<div>
+<div class="logo">LINKSYS SISTEMAS</div>
+<small>Quanto mais confiante você se sente, mais exposto você está.</small>
+</div>
 
-        
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#servicos">Serviços</a></li>
+<li><a href="#politica">Política</a></li>
+<li><a href="#departamentos">Departamentos</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
 
-        <div><p>
-          <div class="logo">LINKSYS SISTEMAS</div>
-            Quanto mais confiante você se sente, mais exposto você está.
-        </p></div>
-
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#politica">Política</a></li>
-            <li><a href="#departamentos">Departamentos</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-
-        <div class="menu-mobile" id="menu-mobile">
-            ☰
-        </div>
-
-    </nav>
+<div class="menu-mobile" id="menu-mobile">☰</div>
+</nav>
 </header>
 
-<!-- HERO -->
-
 <section class="hero" id="home">
-
-    <div class="hero-content">
-
-        <h1>LINKSYS SISTEMAS</h1>
-
-        <p>
-            Especialistas em soluções completas de TI, Desenvolvimento,
-            Redes Corporativas, Infraestrutura, Hardware, Sistemas Web,
-            Mobile e Segurança Digital.
-        </p>
-
-        <a href="#servicos" class="btn">
-            Conheça Nossos Serviços
-        </a>
-
-    </div>
-
+<div class="hero-content">
+<h1>LINKSYS SISTEMAS</h1>
+<p>
+Especialistas em soluções completas de TI, desenvolvimento,
+infraestrutura, redes corporativas, sistemas web e segurança digital.
+</p>
+<a href="#servicos" class="btn">Conheça Nossos Serviços</a>
+</div>
 </section>
-
-<!-- SOBRE -->
 
 <section id="sobre">
-
-    <h2>Sobre a Empresa</h2>
-
-    <div class="sobre-container">
-
-        <div class="card">
-            <h3>Missão</h3>
-
-            <p>
-                Levar inovação tecnológica para empresas através
-                de soluções modernas, rápidas e seguras.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Visão</h3>
-
-            <p>
-                Ser referência nacional em tecnologia e transformação digital.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Valores</h3>
-
-            <p>
-                Ética, inovação, segurança da informação,
-                compromisso e excelência.
-            </p>
-        </div>
-
-    </div>
-
+<h2>Sobre a Empresa</h2>
+<div class="sobre-container">
+<div class="card">
+<h3>Missão</h3>
+<p>Levar inovação tecnológica através de soluções modernas e seguras.</p>
+</div>
+<div class="card">
+<h3>Visão</h3>
+<p>Ser referência nacional em tecnologia e transformação digital.</p>
+</div>
+<div class="card">
+<h3>Valores</h3>
+<p>Ética, inovação, segurança e excelência.</p>
+</div>
+</div>
 </section>
-
-<!-- SERVICOS -->
 
 <section id="servicos">
-
-    <h2>Nossos Serviços</h2>
-
-    <div class="servicos-grid">
-
-        <div class="servico-card">
-            <h3>Desenvolvimento Web</h3>
-
-            <p>
-                Sites, sistemas, plataformas e APIs modernas.
-            </p>
-        </div>
-
-        <div class="servico-card">
-            <h3>Frontend</h3>
-
-            <p>
-                Interfaces modernas e responsivas para desktop e mobile.
-            </p>
-        </div>
-
-        <div class="servico-card">
-            <h3>Backend</h3>
-
-            <p>
-                Integrações, bancos de dados e servidores robustos.
-            </p>
-        </div>
-
-        <div class="servico-card">
-            <h3>Infraestrutura</h3>
-
-            <p>
-                Cloud, servidores, backup e monitoramento empresarial.
-            </p>
-        </div>
-
-        <div class="servico-card">
-            <h3>Hardware</h3>
-
-            <p>
-                Manutenção, upgrades e suporte técnico especializado.
-            </p>
-        </div>
-
-        <div class="servico-card">
-            <h3>Redes Corporativas</h3>
-
-            <p>
-                Redes estabilizadas, Wi-Fi corporativo e segurança digital.
-            </p>
-        </div>
-
-    </div>
-
+<h2>Nossos Serviços</h2>
+<div class="servicos-grid">
+<div class="servico-card"><h3>Desenvolvimento Web</h3></div>
+<div class="servico-card"><h3>Frontend</h3></div>
+<div class="servico-card"><h3>Backend</h3></div>
+<div class="servico-card"><h3>Infraestrutura</h3></div>
+<div class="servico-card"><h3>Hardware</h3></div>
+<div class="servico-card"><h3>Redes Corporativas</h3></div>
+</div>
 </section>
-
-<!-- POLITICA -->
 
 <section id="politica">
-
-    <h2>Política da Empresa</h2>
-
-    <div class="politica-box">
-
-        <p>
-            A Linksys atua com foco total em segurança, qualidade,
-            inovação e satisfação dos clientes.
-        </p>
-
-        <ul>
-            <li>✔ Segurança da informação</li>
-            <li>✔ Proteção de dados</li>
-            <li>✔ Atendimento rápido e eficiente</li>
-            <li>✔ Transparência operacional</li>
-            <li>✔ Atualização constante em tecnologia</li>
-            <li>✔ Suporte especializado</li>
-        </ul>
-
-    </div>
-
+<h2>Política da Empresa</h2>
+<div class="politica-box">
+<ul>
+<li>✔ Segurança da informação</li>
+<li>✔ Proteção de dados</li>
+<li>✔ Atendimento rápido</li>
+<li>✔ Transparência</li>
+<li>✔ Atualização tecnológica</li>
+</ul>
+</div>
 </section>
-
-<!-- TABS -->
 
 <section id="departamentos">
+<h2>Departamentos</h2>
 
-    <h2>Departamentos</h2>
+<div class="tabs">
+<button class="tab-btn active" data-tab="tab1">Desenvolvimento</button>
+<button class="tab-btn" data-tab="tab2">Infraestrutura</button>
+<button class="tab-btn" data-tab="tab3">Suporte</button>
+</div>
 
-    <div class="tabs">
+<div class="tab-content active" id="tab1">
+Desenvolvimento de sistemas web e mobile.
+</div>
 
-        <button class="tab-btn active" data-tab="tab1">
-            Desenvolvimento
-        </button>
+<div class="tab-content" id="tab2">
+Gerenciamento de servidores e redes.
+</div>
 
-        <button class="tab-btn" data-tab="tab2">
-            Infraestrutura
-        </button>
-
-        <button class="tab-btn" data-tab="tab3">
-            Suporte
-        </button>
-
-    </div>
-
-    <div class="tab-content active" id="tab1">
-
-        <p>
-            Desenvolvimento de sistemas web, APIs,
-            aplicativos mobile e soluções empresariais.
-        </p>
-
-    </div>
-
-    <div class="tab-content" id="tab2">
-
-        <p>
-            Gerenciamento de servidores, cloud computing,
-            redes corporativas e segurança digital.
-        </p>
-
-    </div>
-
-    <div class="tab-content" id="tab3">
-
-        <p>
-            Atendimento remoto e presencial com equipe especializada.
-        </p>
-
-    </div>
-
+<div class="tab-content" id="tab3">
+Atendimento remoto e presencial especializado.
+</div>
 </section>
 
-<!-- CONTATO -->
-
 <section id="contato">
+<h2>Contato</h2>
 
-    <h2>Contato</h2>
+<form action="https://formspree.io/f/mgvzwqlr" method="POST" id="contato-form">
 
-    <form>
+<input type="text" name="nome" placeholder="Seu nome" required>
 
-        <input type="text" placeholder="Seu nome" required>
+<input type="email" name="email" placeholder="Seu e-mail" required>
 
-        <input type="email" placeholder="Seu e-mail" required>
+<input type="text" name="assunto" placeholder="Assunto" required>
 
-        <textarea placeholder="Digite sua mensagem"></textarea>
+<textarea name="mensagem" placeholder="Digite sua mensagem" required></textarea>
 
-        <button type="submit">
-            Enviar Mensagem
-        </button>
+<button type="submit">Enviar Mensagem</button>
 
-    </form>
+<p id="status-envio"></p>
 
+</form>
 </section>
 
 <footer>
-
-    <p>
-        © 2026 LINKSYS SSTEMAS - Todos os direitos reservados.
-    </p>
-    <p>
-        Grego Prioli, Wesley Oliveira
-
-    </p>
-
+<p>© 2026 LINKSYS SISTEMAS - Todos os direitos reservados.</p>
+<p>Grego Prioli • Wesley Oliveira</p>
 </footer>
 
 <script>
+const menuMobile=document.getElementById('menu-mobile');
+const navLinks=document.querySelector('.nav-links');
 
-/* MENU MOBILE */
-
-const menuMobile = document.getElementById('menu-mobile');
-const navLinks = document.querySelector('.nav-links');
-
-menuMobile.addEventListener('click', () => {
+menuMobile.addEventListener('click',()=>{
     navLinks.classList.toggle('active');
 });
 
-/* TABS */
+const tabs=document.querySelectorAll('.tab-btn');
+const contents=document.querySelectorAll('.tab-content');
 
-const tabs = document.querySelectorAll('.tab-btn');
-const contents = document.querySelectorAll('.tab-content');
-
-tabs.forEach(tab => {
-
-    tab.addEventListener('click', () => {
-
-        tabs.forEach(btn => {
-            btn.classList.remove('active');
-        });
-
-        contents.forEach(content => {
-            content.classList.remove('active');
-        });
+tabs.forEach(tab=>{
+    tab.addEventListener('click',()=>{
+        tabs.forEach(btn=>btn.classList.remove('active'));
+        contents.forEach(content=>content.classList.remove('active'));
 
         tab.classList.add('active');
-
-        const target = document.getElementById(tab.dataset.tab);
-
-        target.classList.add('active');
-
+        document.getElementById(tab.dataset.tab).classList.add('active');
     });
-
 });
 
+const form=document.getElementById('contato-form');
+const statusEnvio=document.getElementById('status-envio');
+
+form.addEventListener('submit',async function(e){
+    e.preventDefault();
+
+    const dados=new FormData(form);
+
+    const resposta=await fetch(form.action,{
+        method:'POST',
+        body:dados,
+        headers:{'Accept':'application/json'}
+    });
+
+    if(resposta.ok){
+        statusEnvio.textContent='Mensagem enviada com sucesso!';
+        form.reset();
+    }else{
+        statusEnvio.textContent='Erro ao enviar mensagem.';
+    }
+});
 </script>
+
 
 </body>
 </html>
